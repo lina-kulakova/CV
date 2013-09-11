@@ -1,0 +1,243 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{fullpage}
+
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%\hyphenation{im-pre-se}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{%\centering
+		{\Huge Lina \textsc{Kulakova}
+	}\bigskip\par}
+
+	
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place of Birth:} & Nizhny Novgorod, Russia \\
+    \textsc{Date of Birth:} & 1 December 1990 \\
+    \textsc{Address:}   & MSU Main Building ap. B-1532, 1 Leninskiye Gory, 119991, Moscow, Russia \\
+    \textsc{Phone:}     & +7 926 491-27-06\\
+    \textsc{email:}     & \href{mailto:kulakova.lina@gmail.com}{kulakova.lina@gmail.com}
+\end{tabular}
+
+\section{Research Interests}
+\begin{tabular}{rp{13cm}}
+
+\textsc{Applied Mathematics:} & Numerical methods in spatial geostatistics \\
+& Large sparse linear systems solving \\
+& Eigenvalue problem \\
+& Quasi-linear equations\\
+& Fast polynomial factorisation over finite fields  \\
+\end{tabular}
+
+
+%Section: Education
+\section{Education}
+\begin{tabular}{r|p{13cm}}
+ 2008--2013 & \href{http://www.msu.ru/en/}{\textsc{Moscow State University}}, Moscow\\
+ & Degree: Specialist$^1\!\!$ of Science in \textsc{Mathematics}\\
+ & Major: Computational Mathematics\\
+ %& Thesis: ``...'' | 
+ & Advisor: Kirill Yu. \textsc{Bogachev}\\
+ &\normalsize Current Average Grade: 4.8\,/\,5 \hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\
+
+\multicolumn{2}{c}{} \\
+
+ 2007--2008& \href{http://www.aesc.msu.ru/}{\textsc{Advanced Educational and Scientific Center of Moscow State University}}, Moscow \\
+ & Major: Mathematics and Physics \\
+ &Final Grade: 4.9\,/\,5\\
+
+\multicolumn{2}{c}{} \\
+
+ 2001--2007& \textsc{Gymnasium 80}, Nizhny Novgorod \\
+ & Final Grade: 5\,/\,5\\
+
+\multicolumn{2}{c}{} \\
+
+ Aug 2006 & \textsc{Summer Mathematics School}, Kostroma region, Russia
+\end{tabular}
+\linebreak
+
+\footnotesize{$^1$Specialist is a Russian degree equivalent to Master} \normalsize
+
+\section{Internships}
+\begin{tabular}{r|p{13cm}}
+ \emph{present} & \textsc{Internship in TU Wien} \\
+ & \footnotesize Working on finite element method for PDEs.\\
+  
+ \multicolumn{2}{c}{} \\
+
+ \textcolor{white}{11111111} 2012 & 
+ \href{https://google-melange.appspot.com/gsoc/project/google/gsoc2012/kulakova_lina/26001}{\textsc{Google Summer of Code}}\\
+ & \footnotesize{Open-source developer of \href{https://github.com/lina-kulakova/flint2}{<<FLINT -- Fast Library for Number Theory>>} project.
+ Worked on polynomial factorisation over finite fields.}
+ 
+\end{tabular}
+
+\section{Conferences}
+\begin{tabular}{r|p{13cm}}
+ \textcolor{white}{11111111} 2012 & \textsc{International student, postgraduate and young scientist conference <<Lomonosov-2012>>}, Moscow\\
+ & \footnotesize{Certificate for an excellent report <<Statistical method of interpolation surface construction (kriging)>>}
+\end{tabular}
+
+%Section: Work Experience
+\section{Work Experience}
+\begin{tabular}{r|p{13cm}}
+ \textcolor{white}{1111111} 2011-- & Programmer at \href{http://rfdyn.com/}{\textsc{Rock Flow Dynamics}}, Moscow \\
+ \emph{present}& Hydrodynamic Reservoir Simulation\\
+ & \footnotesize {Geostatistical interpolation module: implementation of parallel two- and three-dimensional simple, ordinary and universal kriging,
+ sequential Gauss simulation and corresponding graphical user interface} \\
+ &\footnotesize {Linear solvers module: writing new classes for preconditioners}\\
+\end{tabular}
+
+
+%Section: Scholarships and additional info
+\section{Scholarships and Awards}
+\begin{tabular}{r|p{13cm}}
+
+ \textcolor{white}{11111111} 2012 & Scholarship for students with an outstanding curriculum \\  
+ 
+\multicolumn{2}{c}{} \\
+
+ 2007 & $\textrm{I}^{\textrm{st}}$ place in the European School Championship of <<What? Where? When?>>$^2$ \\
+      & \textit{(in team)}\\
+ 
+\multicolumn{2}{c}{} \\
+
+ 2006 & $\textrm{III}^{\textrm{rd}}$ place in the Mathematical Olympiad of Nizhny Novgorod \\
+ 
+\end{tabular}
+\linebreak
+
+\footnotesize {$^2$<<What? Where? When?>> is an intellectual game widely spread in ex-Soviet Union countries including Russia. 
+ There are also teams in the USA, Germany and Israel.} \normalsize
+
+%Section: Languages
+\section{Spoken Languages}
+\begin{tabular}{rl}
+ \textsc{Russian:}&Native\\
+\textsc{English:}&Upper-Intermediate\\
+\textsc{French:}&Moderate\\
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+ \textsc{Languages:}& C, C$++$, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
+ \textsc{Version Control:}& Git\\
+ \textsc{Operation Systems:} & \textsc{Linux} \\
+\end{tabular}
+
+\section{Activities}
+\begin{tabular}{r|p{13cm}}
+ \textcolor{white}{11111} \textsc{Sport}& \textsc{Artistic Gymnastics}\\
+ & \footnotesize Advanced Degree; member of the university team\\
+ & \textsc{Athletics}\\
+ & \footnotesize Advanced Degree in 50-meter distance; member of the faculty team\\
+ 
+\multicolumn{2}{c}{} \\
+ 
+ \textsc{Work} & \textsc{Volunteering in France}\\
+ \textsc{Camps} & \footnotesize Environmental Work Camp in 2011, constructional Work Camps in 2006 and 2008 \\
+ & \textsc{Volunteering in South Korea}\\
+ & \footnotesize Environmental Work Camp in 2010, art Work Camp in 2010 \\
+ 
+\multicolumn{2}{c}{} \\
+ 
+ \textsc{Other} & \textsc{Historical Dances, Drawing} \\
+\end{tabular}
+
+
+\newpage
+\par{\centering\Large \hypertarget{grds}{Specialist of Science in \textsc{Mathematics}}\par}\large{\centering Grades\par}\normalsize
+\begin{center}
+\begin{tabular}{lcc}
+\multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade}\\ 
+\hline\\
+Calculus	& 5\,/\,5 \\
+Real Calculus &4\,/\,5 \\
+Complex Calculus &5\,/\,5 \\
+Functional Calculus &4\,/\,5 \\
+Variation Calculus and Optimal Control &5\,/\,5 \\
+
+Algebra	        & 5\,/\,5 \\
+Linear Algebra & 5\,/\,5 \\
+Analytical Geometry &5\,/\,5 \\
+
+Discrete Mathematics &5\,/\,5\\
+Mathematical Cybernetics &5\,/\,5 \\
+Number Theory &5\,/\,5 \\
+
+Classical Differential Geometry &5\,/\,5 \\
+Differential Geometry and Topology&5\,/\,5 \\
+
+Probability Theory &5\,/\,5 \\
+Statistics &5\,/\,5 \\
+Random Processes Theory &4\,/\,5 \\
+
+Ordinary Differential Equations &5\,/\,5 \\
+Partial Differential Equations &5\,/\,5 \\
+Non-linear Equations of Mathematical Physics &5\,/\,5 \\
+
+Mathematical Logic &4\,/\,5 \\
+
+Programming &5\,/\,5 \\
+Parallel Programming &5\,/\,5 \\
+Fast Calculations &5\,/\,5 \\
+Numerical Methods &5\,/\,5 \\
+
+Classical Mechanics &5\,/\,5 \\
+Analytical Mechanics &5\,/\,5 \\
+Physics -- part 1 &5\,/\,5\\
+
+English Language &5\,/\,5 \\
+Economics &5\,/\,5 \\
+History &4\,/\,5 \\
+
+Course Work'11 & 5\,/\,5 \\
+Course Work'12 & 5\,/\,5 \\
+
+%\cline{2-3}
+%&\textsc{Gpa}&\textbf{4.8}
+\end{tabular}
+\end{center}
+
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
