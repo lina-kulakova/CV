@@ -20,7 +20,8 @@
 
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin Regular}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
@@ -44,6 +45,8 @@
 %Section: Personal Data
 \section{Personal Data}
 
+\rm
+
 \begin{tabular}{rl}
     \textsc{Place of Birth:} & Nizhny Novgorod, Russia \\
     \textsc{Date of Birth:} & 1 December 1990 \\
@@ -57,7 +60,7 @@
 \begin{tabular}{r|p{13cm}}
  2013-- & \href{http://www.ethz.ch}{\textsc{ETH Zurich}}, Zurich\\
   \emph{present} & PhD student \\
-                 & Major: Applied Mathematics \\
+                 & Major: Mechanical Engineering \\
                  & Advisor: Prof. Dr. Petros \textsc{Koumoutsakos} \\
 
 \multicolumn{2}{c}{} \\
@@ -75,10 +78,10 @@
  & Major: Mathematics and Physics \\
  &Final Grade: 4.9\,/\,5\\
 
-\multicolumn{2}{c}{} \\
+%\multicolumn{2}{c}{} \\
 
- 2001--2007& \textsc{Gymnasium 80}, Nizhny Novgorod \\
- & Final Grade: 5\,/\,5\\
+ %2001--2007& \textsc{Gymnasium 80}, Nizhny Novgorod \\
+ %& Final Grade: 5\,/\,5\\
 
 \multicolumn{2}{c}{} \\
 
@@ -97,13 +100,14 @@
  \multicolumn{2}{c}{} \\
 
 \textcolor{white}{11111111} 2013 & \textsc{Internship in TU Wien} \\
- & \footnotesize Studied some fast and effective C++ techniques\\
+ & \footnotesize Studied some C++ techniques needed for efficient algebraic computations\\
   
  \multicolumn{2}{c}{} \\
 
  \textcolor{white}{11111111} 2012 & 
  \href{https://google-melange.appspot.com/gsoc/project/google/gsoc2012/kulakova_lina/26001}{\textsc{Google Summer of Code}}\\
- & \footnotesize{Open-source developer of \href{https://github.com/lina-kulakova/flint2}{<<FLINT -- Fast Library for Number Theory>>} project.
+ & \footnotesize{Open-source developer of
+ \href{https://github.com/lina-kulakova/flint2}{<<FLINT -- Fast Library for Number Theory>>} project.
  Worked on polynomial factorisation over finite fields}
  
 \end{tabular}
@@ -111,7 +115,8 @@
 %Section: Conferences
 \section{Conferences}
 \begin{tabular}{r|p{13cm}}
- \textcolor{white}{11111111} 2012 & \textsc{International student, postgraduate and young scientist conference <<Lomonosov-2012>>}, Moscow\\
+ \textcolor{white}{11111111} 2012 & \textsc{International student, postgraduate and young scientist conference
+ <<Lomonosov-2012>>}, Moscow\\
  & \footnotesize{Certificate for an excellent report <<Statistical method of interpolation surface construction (kriging)>>}
 \end{tabular}
 
@@ -120,57 +125,58 @@
 \begin{tabular}{r|p{13cm}}
  \textcolor{white}{1} 2011--2013 & Programmer at \href{http://rfdyn.com/}{\textsc{Rock Flow Dynamics}}, Moscow \\
  & Hydrodynamic Reservoir Simulation\\
- & \footnotesize {Geostatistical interpolation module: implementation of parallel two- and three-dimensional simple, ordinary and universal kriging,
- sequential Gauss simulation and corresponding graphical user interface} \\
- &\footnotesize {Linear solvers module: writing new classes for preconditioners}\\
+ & \footnotesize {Parallel (pthreads) implementation of
+ kriging, implementation of sequential Gaussian simulation and corresponding graphical user interface (OpenGL)} \\
+% &\footnotesize {Linear solvers module: writing new classes for preconditioners}\\
 \end{tabular}
 
-
-%Section: Scholarships and awards
-\section{Scholarships and Awards}
-\begin{tabular}{r|p{13cm}}
-
- \textcolor{white}{11111111} 2012 & Scholarship for students with an outstanding curriculum \\  
- 
-\multicolumn{2}{c}{} \\
-
- 2007 & $\textrm{I}^{\textrm{st}}$ place in the European School Championship of <<What? Where? When?>>$^2$ \\
-      & \textit{(in team)}\\
- 
-\multicolumn{2}{c}{} \\
-
- 2006 & $\textrm{III}^{\textrm{rd}}$ place in the Mathematical Olympiad of Nizhny Novgorod \\
- 
-\end{tabular}
-\linebreak
-
-\footnotesize {$^2$<<What? Where? When?>> is an intellectual game widely spread in ex-Soviet Union countries including Russia. 
- There are also teams in the USA, Germany and Israel.} \normalsize
-
-%Section: Research interests
-\section{Research Interests}
-\begin{tabular}{rp{13cm}}
-
-\textsc{Applied Mathematics:} & Numerical methods in spatial geostatistics \\
-& Large sparse linear systems solving \\
-& Uncertainty quantification
-\end{tabular}
 
 %section: Computer Skills
 \section{Computer Skills}
 \begin{tabular}{rl}
- \textsc{Languages:}& C, C$++$, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
- \textsc{Version Control:}& Git\\
- \textsc{Operation Systems:} & \textsc{Linux} \\
+ \textsc{Languages:} & C, C$++$, Python, MATLAB, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
+ \textsc{Version Control:} & Git\\
+ \textsc{Operation Systems:} & \textsc{Linux}, \textsc{MacOS} \\
 \end{tabular}
 
 %Section: Languages
 \section{Spoken Languages}
 \begin{tabular}{rl}
-\textsc{Russian:}&Native\\
-\textsc{English:}&Upper-Intermediate\\
-\textsc{French:}&Moderate\\
-\textsc{Bulgarian:}&Moderate\\
+\textsc{Russian:} & Native\\
+\textsc{English:} & Upper-Intermediate\\
+\textsc{French:} & Intermediate\\
+\textsc{Bulgarian:} & Intermediate\\
+\textsc{German:} & Beginner\\
+\end{tabular}
+
+%Section: Scholarships and awards
+% \section{Scholarships and Awards}
+% \begin{tabular}{r|p{13cm}}
+% 
+%  \textcolor{white}{11111111} 2012 & Scholarship for students with an outstanding curriculum \\  
+%  
+% \multicolumn{2}{c}{} \\
+% 
+%  2007 & $\textrm{I}^{\textrm{st}}$ place in the European School Championship of <<What? Where? When?>>$^2$ \\
+%       & \textit{(in team)}\\
+%  
+% \multicolumn{2}{c}{} \\
+% 
+%  2006 & $\textrm{III}^{\textrm{rd}}$ place in the Mathematical Olympiad of Nizhny Novgorod \\
+%  
+% \end{tabular}
+% \linebreak
+% 
+% \footnotesize {$^2$<<What? Where? When?>> is an intellectual game widely spread in ex-Soviet Union countries including Russia. 
+%  There are also teams in the USA, Germany and Israel.} \normalsize
+
+%Section: Research interests
+\section{Research Interests}
+\begin{tabular}{rp{13cm}}
+
+\textsc{Applied Mathematics:} & Uncertainty quantification \\
+& Large sparse linear systems solving \\
+& Numerical methods in spatial geostatistics
 \end{tabular}
 
 %section: Activities
@@ -190,7 +196,7 @@
  
 \multicolumn{2}{c}{} \\
  
- \textsc{Other} & \textsc{Historical Dances, Drawing} \\
+ \textsc{Other} & \textsc{Tango, Historical Dances, Drawing} \\
 \end{tabular}
 
 
