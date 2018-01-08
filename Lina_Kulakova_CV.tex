@@ -2,16 +2,16 @@
 
 %A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\usepackage{fontspec} %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip}     %other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+%\usepackage[big]{layaureo}                 %better formatting of the A4 page
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{fullpage}
 
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
+\usepackage{supertabular}                 %for Grades
+\usepackage{titlesec}                    %custom \section
 
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
@@ -19,9 +19,13 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 %FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin Regular}
+\fontspec[Path = fonts/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic]{Fontin}
+% \defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%\setmainfont{Fontin}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
@@ -36,225 +40,316 @@
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
-\par{%\centering
-		{\Huge Lina \textsc{Kulakova}
-	}\bigskip\par}
+\par{ {\Huge Lina \textsc{Kulakova} }\bigskip\par}
 
-	
+
 %--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Personal Data}
-
-\rm
-
+\section{Contact Information}
 \begin{tabular}{rl}
-    \textsc{Place of Birth:} & Nizhny Novgorod, Russia \\
-    \textsc{Date of Birth:} & 1 December 1990 \\
-    \textsc{Address:}   & Haldenstrasse 16, 8142 Uitikon Waldegg, Switzerland \\
-%    \textsc{Phone:}     & 044 632 99 19 \\
-    \textsc{email:}     & \href{mailto:kulakova.lina@gmail.com}{kulakova.lina@gmail.com}
+    % \textsc{Place of Birth:} & Nizhny Novgorod, Russia \\
+    % \textsc{Date of Birth:} & 1 December 1990 \\
+    % \textsc{Address:} & Haldenstrasse 16, 8142 Uitikon Waldegg, Switzerland \\
+    \textsc{email:} & \href{mailto:kulakova.lina@gmail.com}{kulakova.lina@gmail.com} \\
+    \textsc{Phone:} & +41 79 245 51 49 \\
 \end{tabular}
 
-%Section: Education
+\section{Visa Information}
+\begin{tabular}{rl}
+    \textsc{Current residence:} & Zurich, Switzerland \\
+    \textsc{Visa:} & Swiss Residence Permit B
+\end{tabular}
+
+% \section{Research Interests}
+% \begin{tabular}{rp{13cm}}
+%     \textsc{Applied Mathematics:} & Uncertainty quantification \\
+%     & Large sparse linear systems solving \\
+%     & Numerical methods in geostatistics
+% \end{tabular}
+
 \section{Education}
 \begin{tabular}{r|p{13cm}}
- 2013-- & \href{http://www.ethz.ch}{\textsc{ETH Zurich}}, Zurich\\
-  \emph{present} & PhD student \\
-                 & Major: Mechanical Engineering \\
-                 & Advisor: Prof. Dr. Petros \textsc{Koumoutsakos} \\
+    2013--2017 & \textsc{ETH Zurich} \\
+    & PhD student in Computational Science and Engineering
+    Laboratory (\href{http://cse-lab.ethz.ch}{CSELab}) \\
+    & Advisor: Prof. Dr. Petros \textsc{Koumoutsakos} \\
+    & Expected defence date: 30 August 2017 \\
 
-\multicolumn{2}{c}{} \\
+    \multicolumn{2}{c}{} \\
 
- 2008--2013 & \href{http://www.msu.ru/en/}{\textsc{Moscow State University}}, Moscow\\
- & Degree: Specialist$^1\!\!$ of Science in \textsc{Mathematics}\\
- & Major: Computational Mathematics\\
- %& Thesis: <<>> | 
- & Advisor: Kirill Yu. \textsc{Bogachev}\\
- &\normalsize Final Grade: 4.9\,/\,5 \hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\
+    2015 & \textsc{\href{http://www.cscs.ch/fileadmin/events/Flyer_Summer_School_2015.pdf}{CSCS-USI Summer School}, Lugano} \\
+    & Subject: Effective High Performance Computing \\
 
-\multicolumn{2}{c}{} \\
+    \multicolumn{2}{c}{} \\
 
- 2007--2008& \href{http://www.aesc.msu.ru/}{\textsc{Advanced Educational and Scientific Center of Moscow State University}}, Moscow \\
- & Major: Mathematics and Physics \\
- &Final Grade: 4.9\,/\,5\\
+    2008--2013 & \textsc{Lomonosov Moscow State University} \\
+    & Degree: Specialist$^1\!\!$ of Science in Mathematics\\
+    & Major: Computational Mathematics\\
+    % & Thesis: <<Parallel Stochastic Algorithm of Interpolation Surface
+    % Construction for Data with a Trend>> \\
+    & Advisor: Dr. Kirill Yu. \textsc{Bogachev}\\
+    % & \normalsize Final Grade: 4.9\,/\,5 \hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams} \\
 
-%\multicolumn{2}{c}{} \\
+    % \multicolumn{2}{c}{} \\
 
- %2001--2007& \textsc{Gymnasium 80}, Nizhny Novgorod \\
- %& Final Grade: 5\,/\,5\\
+    % 2007--2008 & \href{http://www.aesc.msu.ru/}{\textsc{Advanced Educational and
+    % Scientific Center of Moscow State University}}, Moscow \\
+    % & Major: Mathematics and Physics \\
+    % &Final Grade: 4.9\,/\,5\\
 
-\multicolumn{2}{c}{} \\
+    % \multicolumn{2}{c}{} \\
 
- Aug 2006 & \textsc{Summer Mathematics School}, Kostroma region, Russia
+    % 2001--2007& \textsc{Gymnasium 80}, Nizhny Novgorod \\
+    % & Final Grade: 5\,/\,5\\
+
+    % \multicolumn{2}{c}{} \\
+
+    % Aug 2006 & \textsc{Summer Mathematics School}, Kostroma region, Russia
 \end{tabular}
 \linebreak
 
-\footnotesize{$^1$Specialist is a Russian degree equivalent to Master} \normalsize
+\footnotesize{$^1$Specialist is a Russian degree equivalent to MSc}
+\normalsize
 
-%section: Internships
-\section{Internships}
-\begin{tabular}{r|p{13cm}}
-  \textcolor{white}{11111111} 2013 & \textsc{Internship in ETH Zurich} \\
- & \footnotesize Worked on uncertainty quantification project\\
-  
- \multicolumn{2}{c}{} \\
-
-\textcolor{white}{11111111} 2013 & \textsc{Internship in TU Wien} \\
- & \footnotesize Studied some C++ techniques needed for efficient algebraic computations\\
-  
- \multicolumn{2}{c}{} \\
-
- \textcolor{white}{11111111} 2012 & 
- \href{https://google-melange.appspot.com/gsoc/project/google/gsoc2012/kulakova_lina/26001}{\textsc{Google Summer of Code}}\\
- & \footnotesize{Open-source developer of
- \href{https://github.com/lina-kulakova/flint2}{<<FLINT -- Fast Library for Number Theory>>} project.
- Worked on polynomial factorisation over finite fields}
- 
-\end{tabular}
-
-%Section: Conferences
-\section{Conferences}
-\begin{tabular}{r|p{13cm}}
- \textcolor{white}{11111111} 2012 & \textsc{International student, postgraduate and young scientist conference
- <<Lomonosov-2012>>}, Moscow\\
- & \footnotesize{Certificate for an excellent report <<Statistical method of interpolation surface construction (kriging)>>}
-\end{tabular}
-
-%Section: Work Experience
 \section{Work Experience}
 \begin{tabular}{r|p{13cm}}
- \textcolor{white}{1} 2011--2013 & Programmer at \href{http://rfdyn.com/}{\textsc{Rock Flow Dynamics}}, Moscow \\
- & Hydrodynamic Reservoir Simulation\\
- & \footnotesize {Parallel (pthreads) implementation of
- kriging, implementation of sequential Gaussian simulation and corresponding graphical user interface (OpenGL)} \\
-% &\footnotesize {Linear solvers module: writing new classes for preconditioners}\\
+    \textcolor{white}{1} 2017-- & Software Engineer at Google, Zurich \\
+    \emph{present} & Working on an internal product offering a robust storage solution. \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{1} 2011--2013 & Programmer at
+    \href{http://rfdyn.com/}{\textsc{Rock Flow Dynamics}}, Moscow \\
+    % & Hydrodynamic Reservoir Simulation \\
+    & \footnotesize {I have implemented a 3D kriging interpolation algorithm in
+    C++ and the corresponding graphical user interface using Qt. The algorithm
+    is now used for the geological maps reconstruction.} \\
+    % &\footnotesize {Linear solvers module: writing new classes for
+    % preconditioners}\\
 \end{tabular}
 
+\section{Internships and Projects}
+\begin{tabular}{r|p{13cm}}
+    2013-2017 & \textsc{$\Pi$4U Framework} \\
+    & \footnotesize I have
+    \href{http://www.cse-lab.ethz.ch/software/Pi4U}{implemented} an approximate
+    Bayesian inference algorithm and a kriging-based surrogate model in C
+    for the open-source uncertainty quantification and optimisation framework
+    $\Pi$4U \\
 
-%section: Computer Skills
-\section{Computer Skills}
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2014 & \textsc{Academia Industry Modeling Week} \\
+    & \footnotesize Addressing the IBM project, I have
+    \href{https://www.dropbox.com/s/wnojo78rzahemeu/ETH_AIM_2014_presentation.pdf}
+    {implemented} three sparse matrix storage formats in C++ and measured their
+    energy efficiency \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2013 & \textsc{Internship at ETH Zurich} \\
+    & \footnotesize I have
+    \href{https://bitbucket.org/lina_kulakova/jellinder.git}{implemented} an
+    area-bombing uncertainty quantification method in Python and used it to
+    calibrate the parameters of a jellyfish model \\
+    & \\
+    & \textsc{Internship at TU Wien} \\
+    & \footnotesize I have studied and
+    \href{https://github.com/lina-kulakova/TU-Wien}{implemented} expression
+    templates in C++ for compile-time algebraic computations \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2012 &
+    \textsc{Google Summer of Code}\\
+    & \footnotesize{I have
+    \href{https://github.com/lina-kulakova/flint2}{implemented} three
+    algorithms for polynomial factorisation over finite fields in the
+    \href{http://flintlib.org}{<<FLINT -- Fast Library for Number Theory>>}
+    open-source project}
+\end{tabular}
+
+\section{Programming Skills}
 \begin{tabular}{rl}
- \textsc{Languages:} & C, C$++$, Python, MATLAB, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
- \textsc{Version Control:} & Git\\
- \textsc{Operation Systems:} & \textsc{Linux}, \textsc{MacOS} \\
+    \textsc{Languages:} & C, C$++$ (proficient), Python (good), R (prior experience) \\
+    \textsc{Parallelisation:} & MPI, CUDA, OpenMP, POSIX threads \\
 \end{tabular}
 
-%Section: Languages
+\section{Publications}
+\begin{tabular}{r|p{13cm}}
+    \textcolor{white}{11111111} 2017 & Kulakova L., Arampatzis G.,
+    Angelikopoulos P., Hadjidoukas P. E., Papadimitriou C., Koumoutsakos P.,
+    \textsc{Experimental Data over Quantum Mechanics Simulations for Inferring
+    the Repulsive Exponent of the Lennard-Jones Potential in Molecular
+    Dynamics}, \textit{Accepted for publication in Scientific Reports, 2017} \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2016 & Kulakova L., Angelikopoulos P.,
+    Hadjidoukas P. E., Papadimitriou C., Koumoutsakos P., \textsc{Approximate
+    Bayesian Computation for Granular and Molecular Dynamics Simulations},
+    Proceedings of the Platform for Advanced Scientific Computing Conference
+    PASC'16 (2016) \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2015 & Hadjidoukas P.E., Angelikopoulos P.,
+    Kulakova L., Papadimitriou C., Koumoutsakos P., \textsc{Exploiting
+    Task-Based Parallelism in Bayesian Uncertainty Quantification}, Lecture
+    Notes in Computer Science, 9233, 532 (2015)
+\end{tabular}
+
+\section{Conferences}
+\begin{tabular}{r|p{13cm}}
+    \textcolor{white}{11111111} 2017 & \textsc{PASC'17}, Lugano \\
+    & \footnotesize{Presentation <<Bayesian Uncertainty Quantification and
+    Propagation for Dissipative Particle Dynamics>>} \\
+    & \\
+    & \textsc{CNZ Retreat}, Emmetten \\
+    & \footnotesize{Poster <<Data Driven Force Fields for Molecular Dynamics
+    Simulations>>} \\
+    & \\
+    & \textsc{SACC Spring Meeting}, D\"ubendorf \\
+    & \footnotesize{Poster <<Data Driven Force Fields for Molecular Dynamics
+    Simulations>>} \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2016 & \textsc{PASC'16}, Lausanne \\
+    & \footnotesize{Presentation <<Approximate Bayesian Computation for
+    Granular and Molecular Dynamics Simulations>>} \\
+    & \\
+    & \textsc{SIAM UQ'16}, Lausanne \\
+    & \footnotesize{Presentation <<Data-Driven, Bayesian Uncertainty
+    Quantification for Large-Scale Simulations>>} \\
+    & \footnotesize{Poster <<$\Pi$4U: An HPC Framework for Bayesian Uncertainty
+    Quantification of Large Scale Computational Models>>} \\
+
+    \multicolumn{2}{c}{} \\
+
+    \textcolor{white}{11111111} 2012 & \textsc{Lomonosov'12}, Moscow \\
+    & \footnotesize{Presentation <<Statistical Methods for Interpolation
+    Surface Construction>>}
+\end{tabular}
+
+\section{References}
+\begin{tabular}{rl}
+    Prof. Dr. Petros \textsc{Koumoutsakos} & PhD advisor \\
+    & ETH Z\"urich \\
+    & Clausiusstrasse 33, 8092 Z\"urich, Switzerland \\
+    & +41 44 632 52 58 \\
+    & \href{mailto:petros@ethz.ch}{petros@ethz.ch} \\
+    & \\
+    Prof. Dr. Kirill Yu. \textsc{Bogachev} & Diploma advisor \\
+    & Lomonosov Moscow State University \\
+    & Leninskye gory 1, 119991 Moscow, Russia \\
+    & +7 495 939 12 44 \\
+    & \href{mailto:bogachev@mech.math.msu.su}{bogachev@mech.math.msu.su} \\
+    & \\
+    Dr. Fredrik \textsc{Johansson} & Google Summer of Code advisor \\
+    & Universit\'e de Bordeaux \\
+    & Cours de la Lib\'eration 351, 33405 Talence, France \\
+    & +33 054 000 60 70 \\
+    & \href{mailto:fredrik.johansson@gmail.com}{fredrik.johansson@gmail.com} \\
+\end{tabular}
+
 \section{Spoken Languages}
-\begin{tabular}{rl}
-\textsc{Russian:} & Native\\
-\textsc{English:} & Upper-Intermediate\\
-\textsc{French:} & Intermediate\\
-\textsc{Bulgarian:} & Intermediate\\
-\textsc{German:} & Beginner\\
+\begin{tabular}{l}
+    \textsc{Russian} (native), \textsc{English} (fluent), \textsc{French} (intermediate), \textsc{Bulgarian} (intermediate), \textsc{German} (basic)
 \end{tabular}
 
-%Section: Scholarships and awards
 % \section{Scholarships and Awards}
 % \begin{tabular}{r|p{13cm}}
-% 
-%  \textcolor{white}{11111111} 2012 & Scholarship for students with an outstanding curriculum \\  
-%  
+%
+%  \textcolor{white}{11111111} 2012 & Scholarship for students with an outstanding curriculum \\
+%
 % \multicolumn{2}{c}{} \\
-% 
+%
 %  2007 & $\textrm{I}^{\textrm{st}}$ place in the European School Championship of <<What? Where? When?>>$^2$ \\
 %       & \textit{(in team)}\\
-%  
+%
 % \multicolumn{2}{c}{} \\
-% 
+%
 %  2006 & $\textrm{III}^{\textrm{rd}}$ place in the Mathematical Olympiad of Nizhny Novgorod \\
-%  
+%
 % \end{tabular}
 % \linebreak
-% 
-% \footnotesize {$^2$<<What? Where? When?>> is an intellectual game widely spread in ex-Soviet Union countries including Russia. 
+%
+% \footnotesize {$^2$<<What? Where? When?>> is an intellectual game widely spread in ex-Soviet Union countries including Russia.
 %  There are also teams in the USA, Germany and Israel.} \normalsize
 
-%Section: Research interests
-\section{Research Interests}
-\begin{tabular}{rp{13cm}}
+% \section{Activities}
+% \begin{tabular}{r|p{13cm}}
+%     \textcolor{white}{11111} \textsc{Sport}& \textsc{Artistic Gymnastics}\\
+%     & \footnotesize Advanced Degree\\
+%     & \textsc{Athletics}\\
+%     & \footnotesize Advanced Degree in 50-meter distance\\
+%     & \textsc{Argentinian Tango} \\
 
-\textsc{Applied Mathematics:} & Uncertainty quantification \\
-& Large sparse linear systems solving \\
-& Numerical methods in spatial geostatistics
-\end{tabular}
+%     \multicolumn{2}{c}{} \\
 
-%section: Activities
-\section{Activities}
-\begin{tabular}{r|p{13cm}}
- \textcolor{white}{11111} \textsc{Sport}& \textsc{Artistic Gymnastics}\\
- & \footnotesize Advanced Degree\\
- & \textsc{Athletics}\\
- & \footnotesize Advanced Degree in 50-meter distance\\
- 
-\multicolumn{2}{c}{} \\
- 
- \textsc{Work} & \textsc{Volunteering in France}\\
- \textsc{Camps} & \footnotesize Environmental Work Camp in 2011, constructional Work Camps in 2006 and 2008 \\
- & \textsc{Volunteering in South Korea}\\
- & \footnotesize Environmental Work Camp in 2010, art Work Camp in 2010 \\
- 
-\multicolumn{2}{c}{} \\
- 
- \textsc{Other} & \textsc{Tango, Historical Dances, Drawing} \\
-\end{tabular}
+%     \textsc{Volunteering} & \textsc{France (2006, 2008, 2011)} \\
+%     & \footnotesize{Environmental and construction Work Camps} \\
+%     & \textsc{South Korea (2010)} \\
+%     & \footnotesize{Environmental and art Work Camps} \\
+% \end{tabular}
 
 
-\newpage
-\par{\centering\Large \hypertarget{grds}{Specialist of Science in \textsc{Mathematics}}\par}\large{\centering Grades\par}\normalsize
-\begin{center}
-\begin{tabular}{lcc}
-\multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade}\\ 
-\hline\\
-Calculus	& 5\,/\,5 \\
-Real Calculus &4\,/\,5 \\
-Complex Calculus &5\,/\,5 \\
-Functional Calculus &4\,/\,5 \\
-Variation Calculus and Optimal Control &5\,/\,5 \\
+% \newpage
+% \par{\centering\Large \hypertarget{grds}{Specialist of Science in \textsc{Mathematics}}\par}\large{\centering Grades\par}\normalsize
+% \begin{center}
+% \begin{tabular}{lcc}
+% \multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade}\\
+% \hline\\
+% Calculus    & 5\,/\,5 \\
+% Real Calculus &4\,/\,5 \\
+% Complex Calculus &5\,/\,5 \\
+% Functional Calculus &4\,/\,5 \\
+% Variation Calculus and Optimal Control &5\,/\,5 \\
 
-Algebra	        & 5\,/\,5 \\
-Linear Algebra & 5\,/\,5 \\
-Analytical Geometry &5\,/\,5 \\
+% Algebra            & 5\,/\,5 \\
+% Linear Algebra & 5\,/\,5 \\
+% Analytical Geometry &5\,/\,5 \\
 
-Discrete Mathematics &5\,/\,5\\
-Mathematical Cybernetics &5\,/\,5 \\
-Number Theory &5\,/\,5 \\
-Models and Algorithms in Bioinformatics & 5\,/\,5 \\
+% Discrete Mathematics &5\,/\,5\\
+% Mathematical Cybernetics &5\,/\,5 \\
+% Number Theory &5\,/\,5 \\
+% Models and Algorithms in Bioinformatics & 5\,/\,5 \\
 
-Classical Differential Geometry &5\,/\,5 \\
-Differential Geometry and Topology&5\,/\,5 \\
+% Classical Differential Geometry &5\,/\,5 \\
+% Differential Geometry and Topology&5\,/\,5 \\
 
-Probability Theory &5\,/\,5 \\
-Statistics &5\,/\,5 \\
-Random Processes Theory &4\,/\,5 \\
+% Probability Theory &5\,/\,5 \\
+% Statistics &5\,/\,5 \\
+% Random Processes Theory &4\,/\,5 \\
 
-Ordinary Differential Equations &5\,/\,5 \\
-Partial Differential Equations &5\,/\,5 \\
-Non-linear Equations of Mathematical Physics &5\,/\,5 \\
+% Ordinary Differential Equations &5\,/\,5 \\
+% Partial Differential Equations &5\,/\,5 \\
+% Non-linear Equations of Mathematical Physics &5\,/\,5 \\
 
-Mathematical Logic &4\,/\,5 \\
+% Mathematical Logic &4\,/\,5 \\
 
-Programming &5\,/\,5 \\
-Parallel Programming &5\,/\,5 \\
-Fast Calculations &5\,/\,5 \\
-Numerical Methods &5\,/\,5 \\
+% Programming &5\,/\,5 \\
+% Parallel Programming &5\,/\,5 \\
+% Fast Calculations &5\,/\,5 \\
+% Numerical Methods &5\,/\,5 \\
 
-Classical Mechanics &5\,/\,5 \\
-Analytical Mechanics &5\,/\,5 \\
-Mechanics of Continuous Media &5\,/\,5 \\
-Physics &5\,/\,5\\
-Quantum Field Theory &5\,/\,5\\
+% Classical Mechanics &5\,/\,5 \\
+% Analytical Mechanics &5\,/\,5 \\
+% Mechanics of Continuous Media &5\,/\,5 \\
+% Physics &5\,/\,5\\
+% Quantum Field Theory &5\,/\,5\\
 
-English Language &5\,/\,5 \\
-Economics &5\,/\,5 \\
-History &4\,/\,5 \\
-Philosophy &5\,/\,5 \\
+% English Language &5\,/\,5 \\
+% Economics &5\,/\,5 \\
+% History &4\,/\,5 \\
+% Philosophy &5\,/\,5 \\
 
-Course Work'11 & 5\,/\,5 \\
-Course Work'12 & 5\,/\,5 \\
-Diploma Work & 5\,/\,5 \\
-State Exam &  5\,/\,5 \\
+% Course Work'11 & 5\,/\,5 \\
+% Course Work'12 & 5\,/\,5 \\
+% Diploma Work & 5\,/\,5 \\
+% State Exam &  5\,/\,5 \\
 
-\end{tabular}
-\end{center}
+% \end{tabular}
+% \end{center}
+
 \end{document}
